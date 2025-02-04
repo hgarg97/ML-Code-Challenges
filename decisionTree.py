@@ -1,3 +1,6 @@
+# https://www.youtube.com/watch?v=NxEHSAfFlK8
+# https://github.com/AssemblyAI-Community/Machine-Learning-From-Scratch
+
 import numpy as np
 from collections import Counter
 import math
@@ -108,17 +111,24 @@ class DecisionTree:
 
         return left_idxs, right_idxs
 
+    def _gini(self, y):
+        counts = Counter(y)
+        total = len(y)
+        gini = 1.0
+        for count in counts.value():
+            p = count/total
+            gini -= p**2
+        return gini
+
 
     def _entropy(self, y):
         counts = Counter(y)
         total = len(y)
-
         ent = 0.0
         for count in counts.values():
             p = count / total
             if p>0:
                 ent -= p * math.log2(p)
-
         return ent
     
 
