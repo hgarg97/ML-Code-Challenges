@@ -21,12 +21,15 @@ class LogisticRegression:
         self.bias  = 0
 
         for _ in range(self.n_iters):
+            # Predicting Results [Only change from Linear Regression]
             linear_pred = np.dot(X, self.weights) + self.bias
             y_pred = sigmoid(linear_pred)
 
+            # Calculating Error (Gradients)
             dw = (1/n_samples) * np.dot(X.T, y_pred-y)
             db = (1/n_samples) * np.sum(y_pred-y)
 
+            # Updating weights
             self.weights = self.weights - self.lr*dw
             self.bias = self.bias - self.lr*db
 
