@@ -7,8 +7,6 @@ This repository contains code for practicing data science interview questions, a
 The code includes exercises and solutions covering various data science topics such as:
 
 - Machine Learning
-- Deep Learning
-- Natural Language Processing
 - Linear Algebra
 
 ## Folder Structure
