@@ -28,3 +28,46 @@ class KNN:
         most_common = Counter(k_nearest_labels).most_common()
 
         return most_common[0][0]
+
+#  CODE RUN ONE FUNCTION 
+
+# def _ed(x1, x2):
+#     return np.sqrt(np.sum((x2-x1)**2))
+
+# def _knn(X_train, y_train, X_test, k):
+
+#     res = []
+#     for x1 in X_test:
+#         distances = []
+#         for x2 in X_train:
+#             distances.append(_ed(x1, x2))
+
+#         k_indices = np.argsort(distances)[:k]
+
+#         k_nearest_labels = []
+#         for i in k_indices:
+#             k_nearest_labels.append(y_train[i])
+
+#         most_common = Counter(k_nearest_labels).most_common()
+
+#         res.append(most_common[0][0])
+
+#     return res
+
+
+# import numpy as np
+# from sklearn import datasets
+# from sklearn.model_selection import train_test_split
+
+# iris = datasets.load_iris()
+# X, y = iris.data, iris.target
+
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=9)
+
+# predictions = _knn(X_train, y_train, X_test, k=2)
+
+# print(predictions)
+
+# acc = np.sum(predictions == y_test) / len(y_test)
+
+# print(acc)
