@@ -1,3 +1,6 @@
+# https://www.youtube.com/watch?v=rTEtEy5o3X0&list=PLcWfeUsAys2k_xub3mHks85sBHZvg24Jd&index=2
+# https://github.com/AssemblyAI-Community/Machine-Learning-From-Scratch
+
 import numpy as np
 from collections import Counter
 
