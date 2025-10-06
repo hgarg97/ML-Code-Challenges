@@ -27,7 +27,7 @@ class KNN:
         # Majority Vote
         most_common = Counter(k_nearest_labels).most_common()
 
-        return most_common[0][0]
+        return most_common[0][0] # Returns only the name of the label .. [[label_name1, count1], [], .....]
 
 #  CODE RUN ONE FUNCTION 
 
